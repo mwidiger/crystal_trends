@@ -7,6 +7,8 @@ ruby '2.6.2'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 
 gem 'mysql2'
+gem 'pg'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
