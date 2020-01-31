@@ -8,8 +8,29 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <div class="container">
+      <div id="header">
+        <div class="row">
+          <div class="inner_header col-xs-12 col-sm-5">
+            <div class="row">
+              <div class="col-xs-12" id="logo">
+                <%= link_to image_tag('logo.jpg'), 'https://wintergreenresearch.com', class: 'img-responsive', title: 'WinterGreen Research', alt: 'WinterGreen Research' %>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-7">
+            <div class="row">
+              <div class="call_us col-xs-12">
+                <h2>Call Us Now: (781) 863-5078</h2>
+                <p>Email: <%= link_to "info@wintergreenresearch.com", "https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=info@wintergreenresearch.com", target: "_blank" %>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
