@@ -1,0 +1,14 @@
+<% if @report_topic.present? %>
+  <div class="report-topic-title">
+    Report topic: <%= @report_topic %>
+  </div>
+  <% if @files.present? %>
+    <ul>
+      <% @files.each do |file| %>
+        <li><%= link_to file.humanize.capitalize, "/reports/#{@report_topic.downcase}/#{URI.escape(file)}", target: '_blank' %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    No Reports Found.
+  <% end %>
+<% end %>

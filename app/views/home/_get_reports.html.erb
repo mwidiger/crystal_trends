@@ -1,0 +1,14 @@
+<div class="topic-choice">
+  Choose a topic of interest to see reports: 
+  <%= select_tag("report_topic",
+    options_for_select(@report_topics), 
+    prompt: 'Select Topic',
+    data: {
+      remote: true,
+      url: reports_path,
+      method: 'get'
+    }) %>
+</div>
+<div class="topic-reports">
+</div>
+
